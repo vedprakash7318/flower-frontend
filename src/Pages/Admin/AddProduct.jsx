@@ -13,6 +13,8 @@ import { useNavigate } from 'react-router-dom';
 
 const AddProduct = () => {
 
+    const API_URL = import.meta.env.VITE_APi_Url
+    
 
     const navigate = useNavigate()
 
@@ -49,14 +51,14 @@ const AddProduct = () => {
             setLoader(true)
             let res;
             if (editMode) {
-                res = await axios.post(`http://localhost:3000/api/update/${selectedProduct._id}`, formData)
+                res = await axios.post(`${API_URL}/api/update/${selectedProduct._id}`, formData)
                 fetchProduct()
                 setVisible(false)
                 toast("Product Updated")
                 resetForm()
             }
             else {
-                res = await axios.post("http://localhost:3000/api/add", formData)
+                res = await axios.post(`${API_URL}/api/add`, formData)
                 if (res.status == 200) {
                     fetchProduct()
                     toast("Product Added")
@@ -84,7 +86,7 @@ const AddProduct = () => {
 
     const fetchProduct = async () => {
         try {
-            const res = await axios.get('http://localhost:3000/api/get-all')
+            const res = await axios.get(`${API_URL}/api/get-all`)
             setProduct(res.data.product)
 
         } catch (error) {
@@ -113,7 +115,7 @@ const AddProduct = () => {
 
     const handleDelete = async (id) => {
         try {
-            const res = await axios.delete(`http://localhost:3000/api/delete/${id}`)
+            const res = await axios.delete(`${API_URL}/api/delete/${id}`)
             fetchProduct()
             toast("Product Deleted")
         } catch (error) {

@@ -9,10 +9,11 @@ const Login = () => {
   const [password, setPassword] = useState('')
   const navigate = useNavigate()
   const [loading, setLoading] = useState(false)
+  const API_URL = import.meta.env.VITE_APi_Url
   const handleLogin = async () => {
     try {
       setLoading(true)
-      const res = await axios.post('http://localhost:3000/api/login', {
+      const res = await axios.post(`${API_URL}/api/login`, {
         email, password
       })
       if (res.data.success == true) {

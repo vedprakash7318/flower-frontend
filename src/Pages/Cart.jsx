@@ -5,7 +5,7 @@ import axios from 'axios'
 const Cart = () => {
     const [cart,setCart] = useState([])
     const [address,setAddress] = useState('')
-
+const API_URL = import.meta.env.VITE_APi_Url
 
     useEffect(()=>{
         const data = JSON.parse(localStorage.getItem("cart")) || []
@@ -20,7 +20,7 @@ const Cart = () => {
 
     const handlePlace =async()=>{
       try {
-          const res = await axios.post('http://localhost:3000/api/order',{address,cart})
+          const res = await axios.post(`${API_URL}/api/order`,{address,cart})
         alert("Order Placed Successfully")
         localStorage.removeItem("cart")
         setCart([])
