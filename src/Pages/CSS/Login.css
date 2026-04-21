@@ -1,0 +1,76 @@
+.Login-main{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#eef2f7;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.Login-card{
+    width:700px;
+    display:flex;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.Login-left{
+    width:50%;
+    background: crimson;
+    color:white;
+    padding:40px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.Login-brand{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.Login-text{
+    font-size:14px;
+    line-height:1.6;
+}
+
+.Login-right{
+    width:50%;
+    padding:40px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.Login-heading{
+    margin-bottom:20px;
+}
+
+.Login-input{
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:14px;
+}
+
+.Login-input:focus{
+    outline:none;
+    border-color:crimson;
+}
+
+.Login-btn{
+    padding:12px;
+    border:none;
+    background-color: crimson;
+    color:white;
+    font-size:16px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.Login-btn:hover{
+    background-color: rgb(147, 15, 41);
+}

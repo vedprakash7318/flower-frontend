@@ -1,0 +1,35 @@
+import React, { lazy } from 'react'
+import './CSS/Footer.css'
+
+const Footer = () => {
+  return (
+    <>
+
+    <div className="footer">
+      <div className="first-footer">
+        <div className="footer-logo">
+          <img src="/Images/logo.png" alt="" />
+          <p>DigiCoders Technologies</p>
+          <p>Email:- info@digicoders.in</p>
+          <p>Contact:- +91 63072 75065</p>
+        </div>
+      </div>
+      <div className="second-footer">
+        <h3>Short Links</h3>
+        <ul>
+          <li>Home</li>
+          <li>Products</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div className="third-footer">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.963859022877!2d80.94701827454179!3d26.904642076651946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd90f852511b%3A0xea3004cdf494ecbb!2sDigiCoders%20Technologies%20Private%20Limited%2C%20Best%20Software%2FWebsite%2FMobile%20App%20Development%20Company%20in%20Lucknow!5e0!3m2!1sen!2sin!4v1774516743360!5m2!1sen!2sin" width={400} height={200}  ></iframe>
+      </div>
+    </div>
+    
+    </>
+  )
+}
+
+export default Footer

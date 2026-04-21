@@ -1,0 +1,48 @@
+body{
+    font-family: sans-serif;
+}
+.footer{
+    border-top: 1px solid red;
+    height: 300px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.first-footer{
+    height: 80%;
+    width: 30%;
+    color: white;
+}
+
+.footer-logo img{
+    height: 50px;
+}
+
+.second-footer{
+    height: 80%;
+    width: 30%;
+    color: white;
+}
+
+
+.second-footer h3{
+    /* text-align: center; */
+}
+.second-footer ul{
+    list-style: none;
+}
+.second-footer ul li{
+    line-height: 25px;
+    cursor: pointer;
+}
+.second-footer ul li:hover{
+    color: blue;
+}
+.third-footer{
+    height: 80%;
+    width: 30%;
+    
+}

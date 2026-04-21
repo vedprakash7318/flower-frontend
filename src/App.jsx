@@ -1,0 +1,39 @@
+import React from 'react'
+import {BrowserRouter ,Routes,Route} from 'react-router-dom'
+import Home from './Pages/Home'
+import Products from './Pages/Products'
+import Contact from './Pages/Contact'
+import About from './Pages/About'
+import Login from './Pages/Login'
+import DashboardLayout from './Components/DashboardLayout'
+import { ToastContainer } from 'react-toastify'
+import AddProduct from './Pages/Admin/AddProduct'
+import Cart from './Pages/Cart'
+const App = () => {
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/'  element={<Home/>}/>
+          <Route path='/products'  element={<Products/>}/>
+          <Route path='/about'  element={<About/>}/>
+          <Route path='/contact'  element={<Contact/>}/>
+          <Route path='/login'  element={<Login/>}/>
+          <Route path='/cart'  element={<Cart/>}/>
+
+
+
+          {/* Dashboard  */}
+          <Route path='/dashboard'  element={<DashboardLayout/>}/>
+          <Route path='/add-product'  element={<AddProduct/>}/>
+
+
+        </Routes>
+         <ToastContainer />
+      </BrowserRouter>
+    
+    </>
+  )
+}
+
+export default App
